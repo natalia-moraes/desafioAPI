@@ -1,0 +1,106 @@
+:root{
+    --main-color: #36ac7b;
+    --text-grey: #F7C331;
+    --fundo: ##F4F4F2;
+    --naosei: #f4275a;
+}
+
+.home{
+    background: #F4F4F2;
+    background-size: cover;
+    padding-bottom: auto;
+    color: #080808;
+    text-align: center;
+}
+
+h1{ 
+    max-width: 960px;
+    margin: 10px auto;
+    padding-top: 1.2rem;
+    font-size: 6rem;
+    font-weight:900;
+    background: #36ac7b;
+    color:#fff;
+    
+}
+
+h3{
+    font-size: 2.8rem;
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+    font-weight: 700;
+}
+
+.home h3::before,
+.home h3::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #080808;
+    margin: 14px auto 10px;
+}
+
+
+.home ul{
+    margin: 0 auto;
+    width: 280px;
+    height: 60px;
+    background: #f4275a;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.5rem;
+    padding-left: 0px;
+}
+
+.home ul li{
+    text-align: center;
+    padding-top: 13px;
+    color: #fff;
+    cursor:pointer;
+    transition: all .4s;
+}
+
+.home ul:hover{
+    background: #f5a4b8;
+}
+
+
+@media screen and (max-width: 980px ) {
+    h1{ 
+        font-size: 6rem;
+        margin-bottom: 4rem;
+    }
+
+    h3{
+        font-size: 2.3rem;
+    }
+
+    .home ul{
+        width: 220px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .home ul li{
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    h1{ 
+        font-size: 3.5rem;
+    }
+    
+    h3{
+        font-size: 1.8rem;
+        margin-bottom: 5rem;
+    }
+
+    home ul{
+        margin: 0 auto;
+        width: 180px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}

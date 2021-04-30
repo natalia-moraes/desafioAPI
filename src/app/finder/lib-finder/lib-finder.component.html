@@ -1,0 +1,79 @@
+<section class="section">
+    <div class="container">
+            <div class="search">
+                <label>Digite um usuário para pesquisa</label>
+                <div class="search-input">
+                    <input type="text" [formControl]="query">
+                    <button (click)="buscar()">Buscar</button>
+                </div>
+            </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+            <h3 class="details-title"><span class="lab la-accusoft"> Detalhes do Perfil</span></h3>
+        <div class="details">
+            <div class="details-body">
+                <div class="details-card-body">
+                    <div class="details-user">
+                        <img src="{{detalhes_user.avatar_url}}" alt="">
+                        <h3>{{detalhes_user.name}}</h3>
+                    </div>
+                    <div class="details-user-2">
+                        <div class="details-user-2-1">
+                            <h5 style="margin-top:40px">{{detalhes_user.login}}</h5>
+                            <h5>{{detalhes_user.company}}</h5>
+                            <h5>{{detalhes_user.location}}</h5>
+                        </div>
+                        <h3>Dados</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="details-body">
+                <div class="details-card-body">
+                    <div class="details-card">
+                        <h2>{{detalhes_user.followers}}</h2>
+                        <h5>Seguidores</h5>
+                    </div>
+    
+                    <div class="details-card">
+                        <h2>{{detalhes_user.following}}</h2>
+                        <h5>Seguindo</h5>
+                    </div>
+    
+                    <div class="details-card">
+                        <h2>{{detalhes_user.public_repos}}</h2>
+                        <h5>Repositórios</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<section class="repos">
+    <div class="container">
+        <h3 class="details-title"><span class="lab la-accusoft"> Repositórios</span></h3>       
+        <table class="table" id="tabela">
+            <thead>
+                <tr>
+                    <td>Data</td>
+                    <td>Projeto</td>
+                    <td>URL</td>
+                    <td>Linguagem</td>
+                </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let r of res_url">
+                    <td >{{r.created_at | date }}</td>
+                    <td>{{r.name}}</td>
+                    <td><a href="">{{r.html_url}}</a></td>
+                    <td>{{r.language}}</td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+</section>
+        
+                    
